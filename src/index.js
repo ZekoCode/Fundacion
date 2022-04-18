@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LoginSections from './components/organisms/loginSections/LoginSections';
-import './estilos.css'
+// import LoginSections from './components/organisms/loginSections/LoginSections';
+// import './estilos.css'
+
+// import SessionState from './context/session/SessionState';
+
+import App from './App';
 
 const root=document.getElementById('root')
-const componente=<LoginSections/>
+// const componente=()=>(
+    // <SessionState>
+    //     <LoginSections/>
+    // </SessionState>
+// )
 
 
-ReactDOM.render(componente,root);
+ReactDOM.render(<App/>,root);

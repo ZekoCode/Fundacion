@@ -29,7 +29,6 @@ redux or apiContex?
 8) la extencion de los archivos de componentes sera .jsx y la extancion de la funciones normales sera .js
 9) Queda prohibido hacer push a otra rama que no sea la rama development
 
-
 # Lista de comando con git y github
 git restore . // Para descartar todo los cambios del staging area
 git pull [nombre de la rama]   //Para traer los cambios actuales de una rama remota
