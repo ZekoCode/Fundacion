@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# This is documentation for this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Atomic designe => web components
+    components
+        atoms       // Small components example: titles, buttons, textbox, links
+        molecules   // Group of two atoms or more
+        organisms   // Group of two molecules or more with or outwith atoms
+        templates   // Group of two organisms or more 
+        pages       // Is a template with data from api rest
+    context 
+        adminContext
+        profesorContext
+    index.js
+    app.jsx
 
-## Available Scripts
+BEM => css
+    container__chield--elemente
 
-In the project directory, you can run:
+redux or apiContex?
 
-### `npm start`
+# Reglas
+1) Los identificadores de los componentes tiene que ser en "UpperCamelCase". Example: MyComponent
+2) Los identificadores de las constantes seran en "camelCase" con un guion bajo al inicio. Example: _thisIsMyCosnt
+3) Los identificadores de las funciones seran con "camelCase". Example: checkOutSession()
+4) Solo hacer componentes reutilizables siempre y cuando este se repita mas de tres veces
+5) Solo se puede desarrollar a patir de la rama development
+6) Las ramas creadas a partir de la rama development tienen que tener el nombre de la funcionalidad a implementar
+7) Cuando se trabaje en una implementacion procurar no editar o eliminar codigo anterior de otros components a menos que sea necesario hacer una refactorizacion
+8) la extencion de los archivos de componentes sera .jsx y la extancion de la funciones normales sera .js
+9) Queda prohibido hacer push a otra rama que no sea la rama development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Lista de comando con git y github
+git restore . // Para descartar todo los cambios del staging area
+git pull [nombre de la rama]   //Para traer los cambios actuales de una rama remota
+git clone // Para clonar repositorio remoto
+git fetch origin // Para sincronizar el repositorio remoto con el repositorio local y traer datos que no tengamos
 
-### `npm test`
+git branch // Para ver la lista de ramas 
+git branch -r // Para ver la lista de ramas remotas 
+git branch [nombre de la rama] // Para crear una nueva rama a partir de la rama actual
+git checkout [nombre de la rama] // Para moverse a una rama existente ya sea una rama local o remota
+git checkout -b [nombre de la rama]  // Crea una nueva rama a partir de la rama actual y se traslada a esa nueva rama
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+git push origin [nombre de la rama a pushear]
