@@ -6,4 +6,5 @@ import './estilos.css'
 const root=document.getElementById('root')
 const componente=<LoginSections/>
 
+
 ReactDOM.render(componente,root);

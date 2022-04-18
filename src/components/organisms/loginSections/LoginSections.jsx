@@ -12,7 +12,6 @@ function LoginSections() {
         <LoginForm/>
         <br/>
     </div>
-
   )
 }
 
