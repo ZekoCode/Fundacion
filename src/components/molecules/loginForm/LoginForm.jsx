@@ -14,7 +14,7 @@ function LoginForm() {
           <input className="control--form" 
             type="cedula" 
             name="cedula" 
-            id="cedula" 
+            id="cedula"  
             placeholder="Ingrese su cedula..."
           />
         </div>

@@ -11,7 +11,6 @@ function LoginSections() {
         <ImageForm url={imgUrl} alt='Icono'/>
         <LoginForm/>
         <br/>
-
     </div>
 
   )

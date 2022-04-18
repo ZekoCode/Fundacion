@@ -16,7 +16,7 @@
     padding: 5px 10px;
     /* height:; */
     color: #DEC9F2;
-    display: flex;
+    display: flex; 
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
