@@ -2,7 +2,44 @@ import React from 'react'
 import SubtitleForm from '../atoms/subtitleForm/SubtitleForm'
 import './styles.css'
 
+import Selector from '../atoms/Selector'
+
 function VisionCurso() {
+
+  const misMaterias=[
+    {
+      value: "",
+      name: "6to EGB"
+    }, {
+      value: "matematica",
+      name: "Matematicas"
+    },
+    {
+      value: "ciencia",
+      name: "Ciencias"
+    },
+    {
+      value: "Musica",
+      name: "Musica"
+    }
+  ]
+  const misMaterias2=[
+    {
+      value: "",
+      name: "7to EGB"
+    }, {
+      value: "pintura",
+      name: "Pintura"
+    },
+    {
+      value: "ciencia",
+      name: "Ciencias"
+    },
+    {
+      value: "Musica",
+      name: "Musica"
+    }
+  ]
 
     return(
         
@@ -12,13 +49,13 @@ function VisionCurso() {
         <div className="menu">
           <br/><br/>
           <SubtitleForm text='Lista de cursos'/>
+
           <br/><br/><br/><br/><br/><br/>
           
-          <div className='form__control'>
-            <select class="form__control--input">
-              <option value="">5to EGB</option>
-            </select>
-          </div>
+
+
+          <Selector listaMaterias={misMaterias}/>
+          <Selector listaMaterias={misMaterias2}/>
 
           <div className='form__control'>
             <select class="form__control--input">
