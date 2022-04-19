@@ -30,28 +30,58 @@ function SessionState(props) {
                     rol
                 }
             })
+            return true
+        }else{
+            return false
         }
     };
 
+    const setCookisSession=(data)=>{
+        cookies.set('sessionStateRol',data.infoUser.rol,{path:'/'})
+        cookies.set('sessionStateToken',data.accessToken,{path:'/'})
+    }
+
+    const logout = () => {
+        cookies.remove('sessionStateRol',{path:'/'})
+        cookies.remove('sessionStateToken',{path:'/'})
+        dispatch({
+            type: 'LOGOUT',
+            payload: _initialState
+        })
+    }
+
     const login=async()=>{
+        
+        // let credentials={
+        //     "typeCout": "administrador",
+        //     "cedula": "1208593854",
+        //     "password": "12345"
+        // }
+
         const _userSession = await axios.post('http://54.152.168.242:3333/api/v1/post/auth',{
             "typeCout": "administrador",
-            "cedula": "1208593854",
+            "cedula": "1208593855",
             "password": "12345"
         })
-        
+        .catch(err=>{
+            dispatch({
+                type: 'ERROR',
+                payload: 'Login session: Credentials invalid'
+            })
+        })
         if(_userSession.status===200){
+            console.log(_userSession.data)
             dispatch({
                 type: 'LOGIN',
                 payload: _userSession.data
             })
+            setCookisSession(_userSession.data)
         }
     }
-    
-
+     
 
     return (
-        <SessionContext.Provider value={{state,login}}>
+        <SessionContext.Provider value={{state,login,isLogin,logout}}>
             {props.children}
         </SessionContext.Provider>
     )
