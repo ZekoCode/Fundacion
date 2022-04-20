@@ -2,6 +2,7 @@ import React,{useReducer} from 'react'
 import SessionReducer from './SessionReducer'
 import SessionContext from './SessionContext'
 import axios from 'axios';
+import {Navigate} from 'react-router-dom'
 import Cookies from 'universal-cookie';
 
 const cookies=new Cookies();
@@ -21,7 +22,6 @@ function SessionState(props) {
     const isLogin = () => {
         const token=cookies.get('sessionStateToken')
         const rol=cookies.get('sessionStateRol')
-
         if(token && rol){ 
             dispatch({
                 type: 'AUTHENTICATE',
@@ -50,18 +50,12 @@ function SessionState(props) {
         })
     }
 
-    const login=async()=>{
-        
-        // let credentials={
-        //     "typeCout": "administrador",
-        //     "cedula": "1208593854",
-        //     "password": "12345"
-        // }
-
+    const login=async(credentials)=>{
+        // console.log(credentials)
         const _userSession = await axios.post('http://54.152.168.242:3333/api/v1/post/auth',{
-            "typeCout": "administrador",
-            "cedula": "1208593854",
-            "password": "12345"
+            "typeCout":credentials.typeCout,
+            "cedula": credentials.cedula,
+            "password": credentials.password
         })
         .catch(err=>{
             console.log(err)
@@ -70,19 +64,20 @@ function SessionState(props) {
                 payload: 'Login session: Credentials invalid'
             })
         })
-        
         if(_userSession && _userSession.status===200){
-            console.log(_userSession.data)
+            <Navigate to="/"/>
+            setCookisSession(_userSession.data)
             dispatch({
                 type: 'LOGIN',
                 payload: _userSession.data
             })
-            setCookisSession(_userSession.data)
         }else{
-            //redirec to login
+            dispatch({
+                type: 'ERROR',
+                payload: 'Login session: Credentials invalid'
+            })
         }
     }
-     
 
     return (
         <SessionContext.Provider value={{state,login,isLogin,logout}}>

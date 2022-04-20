@@ -35,9 +35,15 @@
 .control--form__input::placeholder{
     color: var(--white2);
 }
-.control--form__input{ background: none;
+.control--form__input{ 
+    background: none;
+    color: var(--white2);
+    width: 100%;
     border: none;
     font-size: 1em;
+}
+.control--form__input:focus{
+    outline: none;
 }
 
 .form--form input[type="radio"]{
@@ -86,8 +92,6 @@
     background: var(--white2);
 }
 
-
-
 .btn--submit{
     width: 250px;
     background: var(--grey1);
@@ -102,3 +106,8 @@
     cursor: pointer;
 }
 
+.disable{
+    background: #999;
+    color: #555;
+    cursor: not-allowed;
+}
