@@ -1,95 +1,104 @@
+.form--title{
+    color: var(--white2);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
 .form--form{
-    background: #888BBF; 
+    background: var(--purple1); 
     width: 340px;
     height: 360px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-radius: 25px
 }
 
 .controls{
-    margin: 15px 0px;
-    background-color: #68718C;
-    width: 230px;
+    margin:15px 0px;
+    background-color: var(--grey2);
+    width: 80%;
     border-radius: 25px;
     padding: 5px 10px;
-    /* height:; */
-    color: #DEC9F2;
     display: flex; 
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
 
-.control--form{
-    color: red;
-
-}
-
 .controls>i{
     margin-right: 15px;
-    
+    color: var(--white2);
+}
+
+.control--form__input::placeholder{
+    color: var(--white2);
+}
+.control--form__input{ background: none;
+    border: none;
+    font-size: 1em;
 }
 
 .form--form input[type="radio"]{
     display: none;
 }
 
-.form--form.entradas.administrador{
-    border-radius: 15px 0 0 15px;
+.administrador{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    /* border: 1px solid white;  */
 }
 
-.form--form.entradas.profesor{
-    border-radius: 0px 15px 15px 0px;
+.profesor{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
-.form--form .entradas{
+.entradas{
     display: flex;
-    flex-wrap:nowrap;
-    justify-content:space-between;
-    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    margin: 15px 0;
+    /* margin-bottom: 20px; */
+    /* border-radius: 25px; */
+    width: 85%;
+    height: 35px;
+    /* background-color: #5149f3;    */
     
 }
 
-.form--form .label-radio{
-    background: #68718C;
-    color: #DEC9F2;
-    padding: 10px;
+.label-radio{
+    background: var(--grey2);
+    color: var(--white2);
+    padding: 5px;
     text-align: center;
-    width: 49.5%;
-   
+    width: 50%;
+    /* border-radius: 25px; */
+}
+.label-radio:hover{
+    cursor: pointer;
 }
 
 .form--form input[type="radio"]:checked + .label-radio{
-    background: purple;
+    color: var(--grey1);
+    background: var(--white2);
 }
 
-.controls>input{
-    width: 90%;
-    background: none;
-    border: none;
-    color: #DEC9F2;
-    font-size: 1.2rem;
-}
+
 
 .btn--submit{
     width: 250px;
-    background: #504F62;
-    color: #DEC9F2;
+    background: var(--grey1);
+    color: var(--white2);
     border-radius: 25px;
     border: none;
     font-size: 1.2rem;
     padding: 5px 10px;
     font-weight: bold;
     display: block;
-    margin: 10px 0;
+    margin-top: 30px;
+    cursor: pointer;
 }
 
-.link--p{
-    /*background: rgb(214, 12, 12);*/ 
-    color: #DEC9F2;
-    width: 500px;
-    margin: 30px ; 
-    text-align: left;
-}

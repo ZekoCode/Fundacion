@@ -1,5 +1,5 @@
 .form--subtitle{
-    color: #DEC9F2;
+    color: var(--pink1);
     font-size: 1.1rem;
     width: 155px;
     margin: -50px;

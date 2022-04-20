@@ -60,22 +60,26 @@ function SessionState(props) {
 
         const _userSession = await axios.post('http://54.152.168.242:3333/api/v1/post/auth',{
             "typeCout": "administrador",
-            "cedula": "1208593855",
+            "cedula": "1208593854",
             "password": "12345"
         })
         .catch(err=>{
+            console.log(err)
             dispatch({
                 type: 'ERROR',
                 payload: 'Login session: Credentials invalid'
             })
         })
-        if(_userSession.status===200){
+        
+        if(_userSession && _userSession.status===200){
             console.log(_userSession.data)
             dispatch({
                 type: 'LOGIN',
                 payload: _userSession.data
             })
             setCookisSession(_userSession.data)
+        }else{
+            //redirec to login
         }
     }
      

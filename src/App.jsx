@@ -1,19 +1,27 @@
-import React from 'react'
+import React,{useContext,useEffect} from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-import LoginSections from './components/organisms/loginSections/LoginSections'
-import VisionCurso from './components/pages/VisionCurso'
+import LoginSection from './components/pages/loginSection/LoginSection'
+// import VisionCurso from './components/pages/VisionCurso'
+
+import SessionContext from './context/session/SessionContext'
 
 function App() {
+
+  const {login}=useContext(SessionContext)
+
+  useEffect(()=>{
+    login()
+
+  },[])
+
   return (
- 
     <BrowserRouter>
         <Routes>
-            <Route path='/login' element={<LoginSections/>}/>
-            <Route path='/curso' element={<VisionCurso/>}/>          
+        <Route path='/'/>
+           <Route path='/login' element={<LoginSection/>}/>
         </Routes>
-    </BrowserRouter>
-
+    </BrowserRouter> 
   )
 }
 
