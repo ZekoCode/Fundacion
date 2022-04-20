@@ -2,7 +2,7 @@ import React,{useReducer} from 'react'
 import SessionReducer from './SessionReducer'
 import SessionContext from './SessionContext'
 import axios from 'axios';
-import {Navigate} from 'react-router-dom'
+// import {Navigate} from 'react-router-dom'
 import Cookies from 'universal-cookie';
 
 const cookies=new Cookies();
@@ -65,7 +65,7 @@ function SessionState(props) {
             })
         })
         if(_userSession && _userSession.status===200){
-            <Navigate to="/"/>
+            
             setCookisSession(_userSession.data)
             dispatch({
                 type: 'LOGIN',

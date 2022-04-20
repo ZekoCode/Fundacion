@@ -10,17 +10,7 @@ function App() {
 
   const {isLogin,state}=useContext(SessionContext)
 
-  useEffect(()=>{
-    if(isLogin()){
-      if(state.user.rol==='profesor'){
-        console.log("profesor")
-        Navigate(`/profesor/${state.user.id}`)
-    }else if(state.user.rol==='adminisrator'){
-        console.log("administrador")
-    }
 
-    }
-  },[])
 
   return (
     <BrowserRouter>
