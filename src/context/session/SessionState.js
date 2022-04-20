@@ -21,13 +21,21 @@ function SessionState(props) {
     const isLogin = () => {
         const token=cookies.get('sessionStateToken')
         const rol=cookies.get('sessionStateRol')
+        const id=cookies.get('sessionStateId')
+        const name=cookies.get('sessionStateName')
+        const lastName=cookies.get('sessionStateLastName')
+        const cedula=cookies.get('sessionStateCedula')
 
         if(token && rol){ 
             dispatch({
                 type: 'AUTHENTICATE',
                 payload: {
                     token,
-                    rol
+                    rol,
+                    id,
+                    name,
+                    lastName,
+                    cedula
                 }
             })
             return true
@@ -39,11 +47,20 @@ function SessionState(props) {
     const setCookisSession=(data)=>{
         cookies.set('sessionStateRol',data.infoUser.rol,{path:'/'})
         cookies.set('sessionStateToken',data.accessToken,{path:'/'})
+        cookies.set('sessionStateId',data.infoUser.Id,{path:'/'})
+        cookies.set('sessionStateName',data.infoUser.Nombres,{path:'/'})
+        cookies.set('sessionStateLastName',data.infoUser.Apellidos,{path:'/'})
+        cookies.set('sessionStateCedula',data.infoUser.Cedula,{path:'/'})
     }
 
     const logout = () => {
         cookies.remove('sessionStateRol',{path:'/'})
         cookies.remove('sessionStateToken',{path:'/'})
+        cookies.remove('sessionStateId',{path:'/'})
+        cookies.remove('sessionStateName',{path:'/'})
+        cookies.remove('sessionStateLastName',{path:'/'})
+        cookies.remove('sessionStateCedula',{path:'/'})
+
         dispatch({
             type: 'LOGOUT',
             payload: _initialState

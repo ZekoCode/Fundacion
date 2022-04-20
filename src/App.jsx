@@ -8,17 +8,21 @@ import SessionContext from './context/session/SessionContext'
 
 function App() {
 
-  const {login}=useContext(SessionContext)
+  const {login,isLogin}=useContext(SessionContext)
 
   useEffect(()=>{
-    login()
+    if (isLogin()){
+      // alert('Wellcome back')
+    }else{
+      login()
+    }
 
   },[])
 
   return (
     <BrowserRouter>
         <Routes>
-        <Route path='/'/>
+          <Route path='/'/>
            <Route path='/login' element={<LoginSection/>}/>
         </Routes>
     </BrowserRouter> 

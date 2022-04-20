@@ -10,7 +10,11 @@ const SessionReducer= (state, action)=>{
                 isAuthenticated: true,
                 token:payload.token,
                 user:{
-                    rol:payload.rol
+                    rol:payload.rol,
+                    Id:payload.id,
+                    Nombres:payload.name,
+                    Apellidos:payload.lastName,
+                    Cedula:payload.cedula
                 }
             }    
         case login:
