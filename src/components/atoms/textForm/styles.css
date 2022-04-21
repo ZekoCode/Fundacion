@@ -1,0 +1,19 @@
+.form--titles {
+    margin: 2px 0px;
+    background-color: #6c6c6c;
+    width: 30px;
+    padding: 7px 5px;
+    color: #DEC9F2;
+    display: flex; 
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: 270px;
+}
+
+.label{
+    background: purple;
+    width: 200px;
+    height: 200px;
+}
