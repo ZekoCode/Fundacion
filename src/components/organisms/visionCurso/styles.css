@@ -55,12 +55,10 @@ body {
     border-right: 1px solid white;
 }
 
-
 .form__control{
     margin: 15px -30px;
     width: 90px;
     /* background-color: aquamarine; */
-  
 }
 
 .form__control--input {

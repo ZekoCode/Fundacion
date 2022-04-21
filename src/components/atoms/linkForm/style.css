@@ -1,7 +1,7 @@
 .form--link{
     padding: 300px;
     text-decoration: none;
-    color: rgba(33, 172, 33, 0.904);
+    color: var(--green1);
 }
 
 .form--link:hover{

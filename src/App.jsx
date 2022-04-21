@@ -1,19 +1,25 @@
-import React from 'react'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import React,{useContext,useEffect} from 'react'
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 
-import LoginSections from './components/organisms/loginSections/LoginSections'
-import VisionCurso from './components/pages/VisionCurso'
+import LoginSection from './components/pages/loginSection/LoginSection'
+import StudentsList from './components/pages/studentsList/StudentsList'
+
+import SessionContext from './context/session/SessionContext'
 
 function App() {
+
+  const {isLogin,state}=useContext(SessionContext)
+  
   return (
- 
     <BrowserRouter>
         <Routes>
-            <Route path='/login' element={<LoginSections/>}/>
-            <Route path='/curso' element={<VisionCurso/>}/>          
+          <Route path='/'/>
+           <Route path='/login' element={<LoginSection/>}/>
+           <Route path='/profesor/:id' render={()=>{
+             return state.token? <StudentsList/>:<Navigate to="login"/>
+           }}/>
         </Routes>
-    </BrowserRouter>
-
+    </BrowserRouter> 
   )
 }
 
