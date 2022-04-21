@@ -1,29 +1,23 @@
 import React,{useContext,useEffect} from 'react'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 
 import LoginSection from './components/pages/loginSection/LoginSection'
-// import VisionCurso from './components/pages/VisionCurso'
+import StudentsList from './components/pages/studentsList/StudentsList'
 
 import SessionContext from './context/session/SessionContext'
 
 function App() {
 
-  const {login,isLogin}=useContext(SessionContext)
-
-  useEffect(()=>{
-    if (isLogin()){
-      // alert('Wellcome back')
-    }else{
-      login()
-    }
-
-  },[])
-
+  const {isLogin,state}=useContext(SessionContext)
+  
   return (
     <BrowserRouter>
         <Routes>
           <Route path='/'/>
            <Route path='/login' element={<LoginSection/>}/>
+           <Route path='/profesor/:id' render={()=>{
+             return state.token? <StudentsList/>:<Navigate to="login"/>
+           }}/>
         </Routes>
     </BrowserRouter> 
   )
