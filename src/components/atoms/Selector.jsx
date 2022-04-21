@@ -3,13 +3,17 @@ import {v4} from 'uuid'
 
 function Selector({listaMaterias}) {
   return (
-    <select id='seleccion'>
-        {
-            listaMaterias.map((nombre, value)=>{
-                return <option id={v4()} value={value}>{nombre}</option>
-            })
-        }
-    </select>
+    <div className='form__control'>
+        <select class="form__control--input">
+            {
+                listaMaterias.map((materia)=>{
+                    return(
+                        <option value={materia.value}>{materia.name}</option>
+                    )
+                })
+            }
+        </select>
+    </div>
   )
 }
 
