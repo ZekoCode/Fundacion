@@ -1,5 +1,6 @@
 import React,{useContext,useEffect} from 'react'
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
+import VisionCurso from './components/organisms/visionCurso/VisionCurso'
 
 import LoginSection from './components/pages/loginSection/LoginSection'
 import StudentsList from './components/pages/studentsList/StudentsList'
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/'/>
            <Route path='/login' element={<LoginSection/>}/>
+           <Route path='/curso' element={<VisionCurso/>}/>
            <Route path='/profesor/:id' render={()=>{
              return state.token? <StudentsList/>:<Navigate to="login"/>
            }}/>

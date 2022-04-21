@@ -1,8 +1,11 @@
 import React from 'react'
-import SubtitleForm from '../atoms/subtitleForm/SubtitleForm'
+import SubtitleForm from '../../atoms/subtitleForm/SubtitleForm'
 import './styles.css'
-
-import Selector from '../atoms/Selector'
+import Selector from '../../atoms/Selector'
+import NotasForm from '../../atoms/notasForm/NotasForm'
+import NombreEstudiante from '../../atoms/nombreEstudiante/NombreEstudiante'
+import TextForm from '../../atoms/textForm/TextForm'
+import TitleForm from '../../atoms/titleForm/TitleForm'
 
 function VisionCurso() {
 
@@ -23,6 +26,7 @@ function VisionCurso() {
       name: "Musica"
     }
   ]
+  
   const misMaterias2=[
     {
       value: "",
@@ -91,7 +95,18 @@ function VisionCurso() {
 
 
         <div className="contenido">
-        
+          
+          <TitleForm text='Matematicas'/><br/><br/><br/>
+          <TextForm indices='P_1'/>
+          <TextForm indices='P_2'/>
+          <br/>
+          <NombreEstudiante estudiante='Arevalo Vaca Aldair Sydenin'/>
+          <NotasForm numero='10'/>
+          <NotasForm numero='7'/>
+          <NotasForm numero='8'/>
+          <br/><br/>
+          <hr />
+
         </div>
 
 
