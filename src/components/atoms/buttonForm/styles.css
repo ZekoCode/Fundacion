@@ -1,8 +1,7 @@
 .form__control{
     margin: 15px -30px;
     width: 90px;
-    /* background-color: aquamarine; */
-  
+    /*background-color: aquamarine;*/
 }
 
 .btn--submit{
@@ -12,8 +11,7 @@
     border-radius: 5px;
     border: none;
     font-size: 1.1rem;
-    padding: 5px 0px;
-    font-weight: bold;
-    display: block;
-    margin: 5px -8px;
+    padding: 1px 5px;
+    text-align: left;
+    margin: 0px -5px;
 }

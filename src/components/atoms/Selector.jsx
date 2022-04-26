@@ -1,5 +1,5 @@
 import React from 'react'
-import {v4} from 'uuid'
+import './styles.css'
 
 function Selector({listaMaterias}) {
   return (

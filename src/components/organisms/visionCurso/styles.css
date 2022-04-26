@@ -27,19 +27,13 @@ body {
     color: #0f0;
 }
 
-.cabecera {
-    color:#ff9;
-    background-color:#000 ;
-    padding:10px;
-}
-
 .contenedor {
     margin:0 auto;
     width:1593px;
 }
   
 .contenido {
-    background-color:#504F62;
+    background-color: #504F62;
     float:left;
     height:663px;
     padding:35px;
@@ -70,17 +64,45 @@ body {
     border-radius: 10px;
 }
 
-.btn--submit{
-    width: 150px;
-    background: #68718C;
+.Tablas{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #504F62;
     color: #DEC9F2;
-    border-radius: 5px;
-    border: none;
-    font-size: 1.1rem;
-    padding: 5px 0px;
-    font-weight: bold;
-    display: block;
-    margin: 5px -8px;
+}
+
+.th{
+    padding: 18px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: #DEC9F2;
+    background-color: #504F62;
+}
+
+.tr{
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: #DEC9F2;
+    background-color: #504F62;
+}
+
+.td{
+    padding: 10px;
+    border: 1px;
+    color: #DEC9F2;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #504F62;
+}
+
+.tdr{
+    padding: 10px;
+    border: 1px;
+    color: rgb(176, 192, 191);
+    border-radius:  10px;
+    text-align: center;
+    background-color: purple;
 }
 
 .pie { 

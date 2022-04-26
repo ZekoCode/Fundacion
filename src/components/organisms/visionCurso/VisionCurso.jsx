@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import SubtitleForm from '../../atoms/subtitleForm/SubtitleForm'
 import './styles.css'
 import Selector from '../../atoms/Selector'
-import NotasForm from '../../atoms/notasForm/NotasForm'
-import NombreEstudiante from '../../atoms/nombreEstudiante/NombreEstudiante'
-import TextForm from '../../atoms/textForm/TextForm'
+import ButtonForm from '../../atoms/buttonForm/ButtonForm';
 import TitleForm from '../../atoms/titleForm/TitleForm'
+
+
 
 function VisionCurso() {
 
@@ -85,28 +85,113 @@ function VisionCurso() {
             </select>
           </div>
 
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-          <div className='form__control'>
-            <button className='btn--submit' type='submit'>Cerrar sesion</button>
-          </div>
+          <ButtonForm sesion='Cerrar Sesion' />
 
         </div>
 
 
         <div className="contenido">
           
-          <TitleForm text='Matematicas'/><br/><br/><br/>
-          <TextForm indices='P_1'/>
-          <TextForm indices='P_2'/>
-          <br/>
-          <NombreEstudiante estudiante='Arevalo Vaca Aldair Sydenin'/>
-          <NotasForm numero='10'/>
-          <NotasForm numero='7'/>
-          <NotasForm numero='8'/>
-          <br/><br/>
-          <hr />
+          <TitleForm text='Matematicas - 2do BGU'/><br/>
+          
+          <table className='Tablas'>
+            <th className='th'>
+              Nombres y Apellidos
+            </th>
+            <th className='th'>
+              P_1
+            </th>
+            <th className='th'>
+              P_2
+            </th>
+            <th className='th'>
+              EQ1
+            </th>
+            <th className='th'>
+              PQ1
+            </th>
+            <th className='th'>
+              P_3
+            </th>
+            <th className='th'>
+              P_4
+            </th>
+            <th className='th'>
+              EQ2
+            </th>
+            <th className='th'>
+              PQ2
+            </th>
+            <th className='th'>
+              PA
+            </th>
+            <th className='th'>
+              C_1
+            </th>
+            <th className='th'>
+              C_2
+            </th>
+            <th className='th'>
+              CQ1
+            </th>
+            <th className='th'>
+              C_3
+            </th>
+            <th className='th'>
+              C_4
+            </th>
+            <th className='th'>
+              CQ2
+            </th>
+            <th className='th'>
+              CF
+            </th>
+            
+            <tr className='tr'>
+              <td className='tr'>AREVALO VACA ALDAIR SYDENIN</td>
+              <td className='td'>10</td>
+              <td className='td'>9</td>
+              <td className='td'>7</td>
+              <td className='tdr'>8.7</td>
+              <td className='td'>8</td>
+              <td className='td'>8</td>
+              <td className='td'>10</td>
+              <td className='tdr'>8</td>
+              <td className='tdr'>8.4</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+            </tr>
 
+            <tr className='tr'>
+              <td className='tr'>AGUILAR MONTAÑO RICHARD CODIGO</td>
+              <td className='td'>8</td>
+              <td className='td'>8</td>
+              <td className='td'>8</td>
+              <td className='tdr'>8</td>
+              <td className='td'>7</td>
+              <td className='td'>6</td>
+              <td className='td'>6</td>
+              <td className='tdr'>6.3</td>
+              <td className='tdr'>7.2</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+              <td className='td'>A</td>
+            </tr>
+
+
+          </table>
+          
         </div>
 
 
