@@ -1,0 +1,8 @@
+.form--subtitle{
+    color: var(--pink1);
+    font-size: 1.1rem;
+    width: 155px;
+    margin: -50px;
+    padding: 10px;
+    text-align: center;
+}   

@@ -1,0 +1,20 @@
+.login--page{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.login--container{
+    background: var(--grey1);
+    width: 850px;
+    height: 450px;
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;  
+}
