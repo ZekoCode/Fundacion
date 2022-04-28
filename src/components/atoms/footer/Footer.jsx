@@ -3,9 +3,9 @@ import './style.css'
 
 function Footer() {
   return (
-    <p className='footer'> 
-            <lable>Fundacion Eina © Coryright 2022</lable>
-    </p>
+    <footer className='footer'> 
+            <label>Fundacion Eina © Coryright 2022</label>
+    </footer>
   )
 }
 

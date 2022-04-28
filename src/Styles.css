@@ -9,7 +9,6 @@
     --black2:#000;
     --green1:#21ac21e7;
     --green2:#0f0;
-    --pink1:#DEC9F2;
     --orange1:#C0392B;
     --yellow1:#ff9;
     --grey1:#504F62;
@@ -29,7 +28,22 @@
 body {
     width: 100vw;
     height: 100vh;
+    background-color: var(--black1);
 } 
+
+*::-webkit-scrollbar {
+    width: 0.4em;
+     height: 0.4em;
+  }
+   
+  *::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 6px rgb(255, 8, 8); */
+  }
+   
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--white2);
+    outline: 1px solid var(--grey2);
+  }
 
 /* .contenedor:link, .contenedor:visited, .contenedor:hover, .contenedor:active {
     color:#0f0;

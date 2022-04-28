@@ -1,13 +1,14 @@
 .form__control{
-    margin: 15px -30px;
-    width: 90px;
+    /* margin: 15px -30px; */
+    width: 100%;
+    margin: 10px 0px;
     /* background-color: aquamarine; */
 }
 
 .form__control--input {
     background: #68718C;
     color: #DEC9F2;
-    width: 150%;
+    width: 100%;
     padding: 5px;
     text-align: center;
     border-radius: 10px;

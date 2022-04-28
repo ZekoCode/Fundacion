@@ -1,12 +1,10 @@
 import React from 'react'
-import './Styles.css'
+import './styles.css'
 
 function ButtonForm({sesion}) {
     return (
-      <div className='form__control'>   
-           
-           <label className='btn--submit' >{sesion}</label>
-
+      <div className='form__control--menu-cursos'>   
+          <label className='btn--submit__menuCurso' >{sesion}</label>
       </div>
     )
   }

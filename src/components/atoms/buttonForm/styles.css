@@ -1,17 +1,21 @@
-.form__control{
-    margin: 15px -30px;
-    width: 90px;
-    /*background-color: aquamarine;*/
+.form__control--menu-cursos{
+    /* margin: 15px -30px; */
+    width: 100%;
+    /* height: 0px; */
+    display: flex;
+    justify-content: center;
+    /* background-color: aquamarine; */
 }
 
-.btn--submit{
-    width: 150px;
+.btn--submit__menuCurso{
+    width:150px;
     background: #68718C;
     color: #DEC9F2;
     border-radius: 5px;
     border: none;
     font-size: 1.1rem;
     padding: 1px 5px;
-    text-align: left;
-    margin: 0px -5px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
