@@ -1,10 +1,10 @@
 import React from 'react';
-import SubtitleForm from '../../atoms/subtitleForm/SubtitleForm'
+import SubtitleForm from '../../atoms/subtitleForm/SubtitleForm';
 import './styles.css'
-import Selector from '../../atoms/Selector'
+import Selector from '../../atoms/Selector';
 import ButtonForm from '../../atoms/buttonForm/ButtonForm';
-import TitleForm from '../../atoms/titleForm/TitleForm'
-
+import TitleForm from '../../atoms/titleForm/TitleForm';
+import Footer from '../../atoms/footer/Footer';
 
 
 function VisionCurso() {
@@ -47,7 +47,7 @@ function VisionCurso() {
 
     return(
         
-    <form> 
+    
       <div className="contenedor">
         
         <div className="menu">
@@ -188,18 +188,11 @@ function VisionCurso() {
               <td className='td'>A</td>
               <td className='td'>A</td>
             </tr>
-
-
           </table>
-          
-        </div>
-
-
-        <div className="pie">
-        <p>Fundacion Eina @ Copyright 2022</p>
-        </div>
-      </div>
-    </form>
+        </div>  
+      
+      <Footer/>
+      </div>  
   )
 }
 
