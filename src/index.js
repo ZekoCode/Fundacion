@@ -5,10 +5,8 @@ import SessionState from './context/session/SessionState';
 import App from './App';
 const root=document.getElementById('root')
 
-
-
 ReactDOM.render(
     <SessionState>
-        <App/>
+            <App/>
     </SessionState>
 ,root);
