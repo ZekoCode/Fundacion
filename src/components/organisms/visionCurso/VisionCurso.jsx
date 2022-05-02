@@ -3,11 +3,7 @@ import SubtitleForm from '../../atoms/subtitleForm/SubtitleForm';
 import './styles.css'
 import Selector from '../../atoms/Selector';
 import ButtonForm from '../../atoms/buttonForm/ButtonForm';
-<<<<<<< HEAD
 import TitleForm from '../../atoms/titleForm/TitleForm';
-=======
-import TitleForm from '../../atoms/titleForm/TitleForm'
->>>>>>> 113fe3e7ddd3a5133240d83eb8d3943e6a602689
 import Footer from '../../atoms/footer/Footer';
 
 
@@ -50,12 +46,10 @@ function VisionCurso() {
   ]
 
     return(
-        
-<<<<<<< HEAD
     
-=======
+
     // <form> 
->>>>>>> 113fe3e7ddd3a5133240d83eb8d3943e6a602689
+
       <div className="contenedor">
         
         <div className='contenedor--main'>
@@ -134,32 +128,26 @@ function VisionCurso() {
                 CF
               </th>
 
-<<<<<<< HEAD
-            <tr className='tr'>
-              <td className='tr'>AGUILAR MONTAÑO RICHARD CODIGO</td>
-              <td className='td'>8</td>
-              <td className='td'>8</td>
-              <td className='td'>8</td>
-              <td className='tdr'>8</td>
-              <td className='td'>7</td>
-              <td className='td'>6</td>
-              <td className='td'>6</td>
-              <td className='tdr'>6.3</td>
-              <td className='tdr'>7.2</td>
-              <td className='td'>A</td>
-              <td className='td'>A</td>
-              <td className='td'>A</td>
-              <td className='td'>A</td>
-              <td className='td'>A</td>
-              <td className='td'>A</td>
-              <td className='td'>A</td>
-            </tr>
-          </table>
-        </div>  
-      
-      <Footer/>
-      </div>  
-=======
+              <tr className='tr'>
+                <td className='tr'>AGUILAR MONTAÑO RICHARD CODIGO</td>
+                <td className='td'>8</td>
+                <td className='td'>8</td>
+                <td className='td'>8</td>
+                <td className='tdr'>8</td>
+                <td className='td'>7</td>
+                <td className='td'>6</td>
+                <td className='td'>6</td>
+                <td className='tdr'>6.3</td>
+                <td className='tdr'>7.2</td>
+                <td className='td'>A</td>
+                <td className='td'>A</td>
+                <td className='td'>A</td>
+                <td className='td'>A</td>
+                <td className='td'>A</td>
+                <td className='td'>A</td>
+                <td className='td'>A</td>
+              </tr>
+              
               <tr className='tr'>
                 <td className='tr'>AREVALO VACA ALDAIR SYDENIN</td>
                 <td className='td'>10</td>
@@ -190,7 +178,6 @@ function VisionCurso() {
       </div>
       
     // </form>
->>>>>>> 113fe3e7ddd3a5133240d83eb8d3943e6a602689
   )
 }
 
