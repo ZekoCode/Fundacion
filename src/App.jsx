@@ -1,5 +1,6 @@
 import React,{useContext,useEffect} from 'react'
 import {BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom'
+import VisionAlumno from './components/organisms/visionAlumno/VisionAlumno'
 import VisionCurso from './components/organisms/visionCurso/VisionCurso'
 
 import LoginSection from './components/pages/loginSection/LoginSection'
@@ -29,7 +30,9 @@ function App() {
               <Route path="/curso" element={<VisionCurso/>} />
             )
           }
-          {/* <Route path="*" element={<h1>Rout not found</h1>} /> */}
+          
+          <Route path="/alumnos" element={<VisionAlumno/>}/>
+          {/* <Route path="*" element={<h1>Rout not found</h1>} /> */}   
 
         </Routes>
     </BrowserRouter> 
