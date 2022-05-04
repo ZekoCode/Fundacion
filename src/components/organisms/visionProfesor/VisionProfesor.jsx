@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 import SubtitleForm from '../../atoms/subtitleForm/SubtitleForm';
-import './Estilos.css'
+import './estilos.css'
 import ButtonForm from '../../atoms/buttonForm/ButtonForm';
 import TitleForm from '../../atoms/titleForm/TitleForm';
 import Footer from '../../atoms/footer/Footer';
 import EstadoMenu from '../../atoms/estadoMenu/EstadoMenu';
 
-function VisionAlumno() {
+function VisionProfesor() {
 
     return (
 
@@ -32,7 +32,7 @@ function VisionAlumno() {
 
                 <div className="contenido">
 
-                    <TitleForm text='Estudiantes' />
+                    <TitleForm text='Profesores' />
 
                     <main>
                         
@@ -63,6 +63,14 @@ function VisionAlumno() {
                                 <label>Teléfono</label>
                                 <input name='Telefono' type='number' autocomplete />
                             </div>
+                            <div className='field'>
+                                <label>Titulacion</label>
+                                <input name='Titulo' type='text' autocomplete />
+                            </div>
+                            <div className='field'>
+                                <label>Contraseña</label>
+                                <input name='contraseña' type='password' autocomplete />
+                            </div>
                             
                             <button className='submit'>Guardar</button>
                             
@@ -74,9 +82,11 @@ function VisionAlumno() {
                         <li >Apellidos</li>
                         <li >Nombres</li>
                         <li >Curso</li>
-                        <li >Cedulas</li>
+                        <li >Cedula</li>
                         <li >Telefono</li>
                         <li >Direccion</li>
+                        <li >Titulacion</li>
+                        <li >Contraseña</li>
                         <EstadoMenu estado='Activo'/>
                     </ul>  
 
@@ -85,9 +95,11 @@ function VisionAlumno() {
                         <li >Apellidos</li>
                         <li >Nombres</li>
                         <li >Curso</li>
-                        <li >Cedulas</li>
+                        <li >Cedula</li>
                         <li >Telefono</li>
                         <li >Direccion</li>
+                        <li >Titulacion</li>
+                        <li >Contraseña</li>
                         <EstadoMenu estado='Inactivo'/>
                     </ul>  
 
@@ -100,4 +112,4 @@ function VisionAlumno() {
     )
 }
 
-export default VisionAlumno
+export default VisionProfesor

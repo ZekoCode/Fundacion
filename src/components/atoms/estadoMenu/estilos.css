@@ -1,0 +1,17 @@
+.acciones {
+    background-color: var(--grey2);
+    color: var(--white2);
+    text-decoration: none;
+    justify-content: center;
+    height: -10px;
+    padding: 9px 2px;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    display: inline-block;
+    border-radius: 9px;
+	border: 1px solid var(--grey1);
+}
+
+ul {
+    list-style: none;
+}

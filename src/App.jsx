@@ -2,6 +2,7 @@ import React,{useContext,useEffect} from 'react'
 import {BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom'
 import VisionAlumno from './components/organisms/visionAlumno/VisionAlumno'
 import VisionCurso from './components/organisms/visionCurso/VisionCurso'
+import VisionProfesor from './components/organisms/visionProfesor/VisionProfesor'
 
 import LoginSection from './components/pages/loginSection/LoginSection'
 // import StudentsList from './components/pages/studentsList/StudentsList'
@@ -32,7 +33,9 @@ function App() {
           }
           
           <Route path="/alumnos" element={<VisionAlumno/>}/>
-          {/* <Route path="*" element={<h1>Rout not found</h1>} /> */}   
+          {/* <Route path="*" element={<h1>Rout not found</h1>} /> */}
+
+          <Route path="/profe" element={<VisionProfesor/>}/>   
 
         </Routes>
     </BrowserRouter> 
