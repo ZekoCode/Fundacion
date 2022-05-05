@@ -1,4 +1,4 @@
-import {} from '../types'
+import {login} from '../types'
 
 const ProfesorReducer= (state, action)=>{
     const {payload, type}=action
@@ -14,8 +14,8 @@ const ProfesorReducer= (state, action)=>{
         //         }
         //     }    
     
-        // default:
-        //     return state
+        default:
+            return state
     }
 }
 

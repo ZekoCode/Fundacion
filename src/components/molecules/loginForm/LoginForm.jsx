@@ -1,11 +1,11 @@
-import React, { useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import SessionContext from "../../../context/session/SessionContext";
 import "./styles.css";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
-  const navigating=useNavigate()
-  const {login} = useContext(SessionContext);
+  const navigating = useNavigate();
+  const {login } = useContext(SessionContext);
 
   const credentials = {
     typeCout: "",
@@ -22,23 +22,29 @@ function LoginForm() {
     });
   };
 
-  const initSession =async (e) => {
+  const uncheckedRadioButton = () => {
+    let radio = document.querySelector(
+      "input[type=radio][name=typeCout]:checked"
+    );
+    radio.checked = false;
+  };
+
+  const initSession = async (e) => {
     try {
       e.preventDefault();
-
-      const isAutorizated=await login(credentialsState);
-      
-      if(isAutorizated){
-        navigating('/curso')
+      const isAutorizated = await login(credentialsState);
+      if (isAutorizated) {
+        navigating("/curso");
       }
 
+      uncheckedRadioButton();
       setCredentialsState({
-      typeCout: "",
-      cedula: "",
-      password: "",
-    });
+        typeCout: "",
+        cedula: "",
+        password: "",
+      });
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
   };
 
