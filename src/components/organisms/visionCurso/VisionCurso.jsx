@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext, useEffect} from 'react';
 import SubtitleForm from '../../atoms/subtitleForm/SubtitleForm';
 import './styles.css'
 import Selector from '../../atoms/Selector';
@@ -6,8 +6,20 @@ import ButtonForm from '../../atoms/buttonForm/ButtonForm';
 import TitleForm from '../../atoms/titleForm/TitleForm';
 import Footer from '../../atoms/footer/Footer';
 
+import ProfesorContext from '../../../context/profesor/ProfesorContext';
+import SessionContext from '../../../context/session/SessionContext';
 
 function VisionCurso() {
+
+  const {state}=useContext(SessionContext)
+  const {getCalificaciones}=useContext(ProfesorContext)
+  
+
+  useEffect(()=>{
+    const credentials={token:state.token,rol:state.user.rol,cedula:parseInt(state.user.Cedula)}
+    // console.log(credentials)
+    getCalificaciones(credentials)
+  },[])
 
   const misMaterias=[
     {
