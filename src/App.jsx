@@ -5,6 +5,7 @@ import VisionCurso from './components/organisms/visionCurso/VisionCurso'
 import VisionProfesor from './components/organisms/visionProfesor/VisionProfesor'
 
 import LoginSection from './components/pages/loginSection/LoginSection'
+import TeacherDashboard from './components/pages/teacherDashboard/TeacherDashboard'
 // import StudentsList from './components/pages/studentsList/StudentsList'
 
 import SessionContext from './context/session/SessionContext'
@@ -24,16 +25,18 @@ function App() {
             !state.isAuthenticated&&(
               <>
                 <Route path="/login" element={<LoginSection/>} />
-                <Route path="/curso" element={<Navigate to="/login" replace/>} />
+                <Route path="/maestro" element={<Navigate to="/login" replace/>} />
+                {/* <Route path="/administrador" element={<Navigate to="/login" replace/>} /> */} //this route component's administrator
               </>
             )
           }
 
           {
             (state.isAuthenticated&&state.user.rol==='profesor')&&(
-              <Route path="/login" element={<Navigate to="/curso" replace/>} />
+              <Route path="/login" element={<Navigate to="/maestro" replace/>} />
             )
           }
+
           {/* {
             (state.isAuthenticated&&state.user.rol==='administrador')&&(
               <Route path="/login" element={<Navigate to="/curso" replace/>} />
@@ -41,8 +44,8 @@ function App() {
           } */}
 
           {
-           (state.isAuthenticated&&state.user.rol==='profesor')&&(
-              <Route path="/curso" element={<VisionCurso/>} />
+            (state.isAuthenticated&&state.user.rol==='profesor')&&(
+              <Route path="/maestro" element={<TeacherDashboard/>}/>
             )
           }
 

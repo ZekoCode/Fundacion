@@ -1,0 +1,9 @@
+.professorNotes--table--row__nameStudent{
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.professorNotes--table--row__nameStudent>p{
+    color: var(--white2);
+    /* background-color: aquamarine; */
+    text-align: left;
+}

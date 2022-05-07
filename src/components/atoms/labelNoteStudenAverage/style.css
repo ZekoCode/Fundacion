@@ -1,0 +1,17 @@
+.professorNotes--table--row__noteLabelAverage__container{
+    /* border: 1px solid red; */
+    text-align: left;
+}
+.professorNotes--table--row__noteLabelAverage__label{
+
+    padding: 10px;
+    margin: 0 5px;
+    font-weight: bold;
+    border: 1px solid var(--white2);
+    box-shadow:  inset 0 0 5px var(--white2);
+    /* width: 35px; */
+    color: var(--black1);
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--white2);
+}
