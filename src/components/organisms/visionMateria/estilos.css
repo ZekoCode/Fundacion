@@ -1,0 +1,127 @@
+.contenedor {
+    /* margin:0 auto; */
+    width: 100vw;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+  
+.contenedor--main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.contenido {
+    background-color: var(--grey1);
+    height:102%;
+    padding:35px;
+    width:100%;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.menu {
+    background-color:var(--grey1);
+    /* background-color: aqua; */
+    height:100%;
+    width:200px;
+    border-right: 1px solid var(--white2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.menu--main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 0px;
+    box-sizing: border-box;
+}
+
+main{
+	padding: 0rem ;
+
+	/* background-color: lightgray; */
+}
+
+form{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 20%;
+	max-width: 400px;
+	margin-top:0.5rem;
+    /* background-color: black; */
+}
+
+.field{
+	display: flex;
+	flex-direction: column;
+
+	width: 14rem;
+	margin: 0.5rem 0;
+}
+
+.field label{
+	font-size: 0.9rem;
+
+	margin-bottom: 0.2rem;
+
+	color: var(--white2);
+}
+
+.field input{
+	font-size: 1.1rem;
+    background-color: var(--white2);
+	height: 1.3rem;
+	padding-left: 0.5rem;
+
+	border: 2px solid #696969;
+	border-radius: 8px;
+}
+
+.submit{
+	justify-content: center;
+	width: 30%;
+	margin-top: 1.5rem;
+	font-size: 1.0rem;
+	padding: -0.5rem ;
+    color: var(--white2);
+	border: 2.5px solid #696969;
+	border-radius: 10px;
+	background-color: var(--grey2);
+}
+
+.mostrador li {
+    color: var(--white1);
+    border: 1px solid var(--black2);
+    justify-content: center;
+    padding: 8px 5px;
+    padding-right: 30rem;
+    padding-left: 30rem;
+    border-radius: 8px;
+    border-collapse: collapse;
+}
+
+ul {
+    list-style: none;
+
+}
+
+.mostrador > li {
+    float: left;
+}
