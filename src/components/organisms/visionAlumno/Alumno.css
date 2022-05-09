@@ -113,9 +113,9 @@ form{
     color: var(--white1);
     border: 1px solid black;
     justify-content: center;
-    padding: 8px 5px;
-    padding-right: 4rem;
-    padding-left: 4rem;
+    padding: 5px 3px;
+    padding-right: 2.8rem;
+    padding-left: 2.8rem;
     border-collapse: collapse;
 }
 

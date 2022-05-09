@@ -1,6 +1,6 @@
 import React from 'react'
 import SubtitleForm from '../../atoms/subtitleForm/SubtitleForm';
-import './estilos.css'
+import './Materia.css'
 import ButtonForm from '../../atoms/buttonForm/ButtonForm';
 import TitleForm from '../../atoms/titleForm/TitleForm';
 import Footer from '../../atoms/footer/Footer';
