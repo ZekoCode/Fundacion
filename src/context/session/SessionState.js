@@ -82,11 +82,12 @@ function SessionState(props) {
           payload: _userSession.data,
         });
         resolve("Wellcome");
-      } else {
+      }else{
         dispatch({
           type: "ERROR",
           payload: "Login session: Credentials invalid",
         });
+        
         reject(new Error("Login session: Credentials invalid"));
       }
     });

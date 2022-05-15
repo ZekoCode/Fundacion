@@ -9,6 +9,7 @@
     height: 50px;
     border-collapse: collapse;
     width: 100%;
+    border-radius: 5px;
 }
 
 .tableListNotes--body__row:nth-child(even) { 
@@ -16,5 +17,5 @@
 }
 
 .tableListNotes--body__row:nth-child(odd) { 
-    background: var(--grey2)
+    background: var(--grey2);
 }

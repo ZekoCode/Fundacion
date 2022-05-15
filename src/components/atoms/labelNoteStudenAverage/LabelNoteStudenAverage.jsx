@@ -3,7 +3,7 @@ import './style.css'
 
 function LabelNoteStudenAverage({valueAverage}) {
 
-  const [valueText,setValue] = React.useState(valueAverage)
+  const [valueText,setValue] = React.useState(valueAverage.toFixed(2))
 
   return (
     <td className="professorNotes--table--row__noteLabelAverage__container">

@@ -5,10 +5,8 @@
 
 .professorNotes--table--row__noteStudent__inputContainer__input{
     padding: 10px;
-    /* margin: 0 5px; */
     border: 1px solid var(--black2);
     box-shadow:  inset 0 0 5px var(--black2);
-    /* box-sizing: border-box; */
     width: 35px;
     color: var(--white2);
     border-radius: 5px;

@@ -4,6 +4,8 @@ import VisionCurso from '../../organisms/visionCurso/VisionCurso'
 import './style.css'
 
 function TeacherDashboard() {
+
+
   return (
     <div className="contenedor">
         <VisionCurso/>

@@ -1,14 +1,34 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import './styles.css'
+import ProfesorContext from '../../../context/profesor/ProfesorContext'
+import {v4} from 'uuid'
 
-function Selector(matters) {
+function Selector({matters}) {
+
+const {currentMatter}=useContext(ProfesorContext)
+
+const handleSelecteMatter=(e)=>{
+    // let dropDown = document.getElementById(id);
+    
+    if (e.target.value!==matters.curso){
+        currentMatter({
+            curso:matters.curso,
+            materia:e.target.value
+        })
+        // dropDown.selectedIndex = 0;
+    }
+}
+
+
+
   return (
-    <div className='selector--matter--container'>
-        <select className="selector--matter__input">
+    <div key={v4()} className='selector--matter--container'>
+        <select id={v4()} onChange={(e)=>{handleSelecteMatter(e)}} className="selector--matter__input">
+        <option defaultValue="" className='selector--matter__input__option'>{matters.curso}</option>
             {
-                matters.listaMaterias.map((matter)=>{
+                matters.materias.map((matter)=>{
                     return(
-                        <option className='selector--matter__input__option' key={matter.id_materia} value={matter.value}>{matter.nombre_materia}</option>
+                        <option key={v4()} className='selector--matter__input__option' value={matter}>{matter}</option>
                     )
                 })
             }

@@ -11,7 +11,7 @@ import TeacherDashboard from './components/pages/teacherDashboard/TeacherDashboa
 // import StudentsList from './components/pages/studentsList/StudentsList'
 
 import SessionContext from './context/session/SessionContext'
-
+ 
 
 function App() {
   const {isLogin,state}=useContext(SessionContext)
@@ -29,6 +29,7 @@ function App() {
               <>
                 <Route path="/login" element={<LoginSection/>} />
                 <Route path="/maestro" element={<Navigate to="/login" replace/>} />
+                <Route path="/admin" element={<Navigate to="/login" replace/>} />
                 {/* <Route path="/administrador" element={<Navigate to="/login" replace/>} /> */} //this route component's administrator
               </>
             )
@@ -55,7 +56,7 @@ function App() {
 
 
           <Route path="/alumnos" element={<VisionAlumno/>}/>
-          {/* <Route path="*" element={<h1>Rout not found</h1>} /> */}
+          <Route path="*" element={<h1>Route not found</h1>} />
 
           <Route path="/profe" element={<VisionProfesor/>}/>
 
