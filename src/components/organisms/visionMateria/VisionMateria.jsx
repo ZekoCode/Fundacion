@@ -24,6 +24,7 @@ function VisionMateria() {
                         <ButtonForm sesion='Materias' />
                         <ButtonForm sesion='Cursos' />
                         <ButtonForm sesion='Calificaciones' />
+                        <ButtonForm sesion='Configuracion' />
                     </div>
 
                     <ButtonForm sesion='Cerrar Sesion' />
@@ -48,10 +49,20 @@ function VisionMateria() {
                     </main>
                     <br/><br/>
 
-                    <ul className='mostrador'>
-                        <li >Nombres</li>
-                        <EstadoMenu estado='Activo'/>
-                    </ul>  
+                    <table className='Tabla--materia'>
+                        <th className='th--materia-panel'>
+                            Materias
+                        </th>
+                        <th className='thr'>
+                            Activo
+                        </th>
+                        
+
+                        <tr className='tr--materia'>
+                            <td className='td--materia'>Ciencias Sociales 8.GBU</td>
+                            <td className='td--materia'>SI</td>
+                        </tr>
+                    </table>  
                     
                 </div>
             </div>

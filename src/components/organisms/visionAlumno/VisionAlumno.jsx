@@ -24,6 +24,7 @@ function VisionAlumno() {
                         <ButtonForm sesion='Materias' />
                         <ButtonForm sesion='Cursos' />
                         <ButtonForm sesion='Calificaciones' />
+                        <ButtonForm sesion='Configuracion' />
                     </div>
 
                     <ButtonForm sesion='Cerrar Sesion' />
@@ -35,17 +36,17 @@ function VisionAlumno() {
                     <TitleForm text='Estudiantes' />
 
                     <main>
-                        
+
                         <form>
                             <div className='field'>
                                 <label>Nombre</label>
-                                <input name='nombre' type='name'  autocomplete />
+                                <input name='nombre' type='name' autocomplete />
                             </div>
                             <div className='field'>
                                 <label>Apellidos</label>
                                 <input name='apellidos' type='name' autocomplete />
                             </div>
-                            
+
                             <div className='field'>
                                 <label>Cedula</label>
                                 <input name='cedula' type='number' autocomplete />
@@ -63,33 +64,82 @@ function VisionAlumno() {
                                 <label>Teléfono</label>
                                 <input name='Telefono' type='number' autocomplete />
                             </div>
-                            
+
                             <button className='submit'>Guardar</button>
-                            
+
                         </form>
                     </main>
-                    <br/><br/>
+                    <br /><br />
 
-                    <ul className='mostrador'>
-                        <li >Apellidos</li>
-                        <li >Nombres</li>
-                        <li >Curso</li>
-                        <li >Cedulas</li>
-                        <li >Telefono</li>
-                        <li >Direccion</li>
-                        <EstadoMenu estado='Activo'/>
-                    </ul>  
+                    <table className='Tabla--alumno'>
+                        <th className='th--alumno-panel'>
+                            Apellidos
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Nombres
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Curso
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Cedula
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Telefono
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Direccion
+                        </th>
+                        <th className='thr'>
+                            Activo
+                        </th>
+                        
 
-                    <br/><br/><br/><br/>
-                    <ul className='mostrador'>
-                        <li >Apellidos</li>
-                        <li >Nombres</li>
-                        <li >Curso</li>
-                        <li >Cedulas</li>
-                        <li >Telefono</li>
-                        <li >Direccion</li>
-                        <EstadoMenu estado='Inactivo'/>
-                    </ul>  
+                        <tr className='tr--alumno'>
+                            <td className='td--alumno'>AGUILAR MONTAÑO</td>
+                            <td className='td--alumno'>RICHARD ANTHONY</td>
+                            <td className='td--alumno'>1.BGU</td>
+                            <td className='td--alumno'>178945372</td>
+                            <td className='td--alumno'>0999716754</td>
+                            <td className='td--alumno'>Av Manuel Cordoba Galarza y Simon Bolivar</td>
+                            <td className='td--alumno'>SI</td>
+                        </tr>
+                    </table>
+
+                    <br /><br /><br />
+                    <table className='Tabla--alumno'>
+                        <th className='th--alumno-panel'>
+                            Apellidos
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Nombres
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Curso
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Cedula
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Telefono
+                        </th>
+                        <th className='th--alumno-panel'>
+                            Direccion
+                        </th>
+                        <th className='thr'>
+                            Inactivo
+                        </th>
+                        
+                        <tr className='tr--alumno'>
+                            <td className='td--alumno'>SUAREZ MANITO</td>
+                            <td className='td--alumno'>LORENZO JEFFREY</td>
+                            <td className='td--alumno'>1.BGU</td>
+                            <td className='td--alumno'>1784456891</td>
+                            <td className='td--alumno'>0998674582</td>
+                            <td className='td--alumno'>Av La Gazca y Central</td>
+                            <td className='td--alumno'>SI</td>
+                        </tr>
+                    </table>    
 
                 </div>
             </div>

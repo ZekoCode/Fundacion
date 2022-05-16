@@ -24,6 +24,7 @@ function VisionProfesor() {
                         <ButtonForm sesion='Materias' />
                         <ButtonForm sesion='Cursos' />
                         <ButtonForm sesion='Calificaciones' />
+                        <ButtonForm sesion='Configuracion' />
                     </div>
 
                     <ButtonForm sesion='Cerrar Sesion' />
@@ -78,30 +79,92 @@ function VisionProfesor() {
                     </main>
                     <br/><br/>
 
-                    <ul className='mostrador'>
-                        <li >Apellidos</li>
-                        <li >Nombres</li>
-                        <li >Curso</li>
-                        <li >Cedula</li>
-                        <li >Telefono</li>
-                        <li >Direccion</li>
-                        <li >Titulacion</li>
-                        <li >Contraseña</li>
-                        <EstadoMenu estado='Activo'/>
-                    </ul>  
+                    <table className='Tabla--profez'>
+                        <th className='th--profez-panel'>
+                            Apellidos
+                        </th>
+                        <th className='th--profez-panel'>
+                            Nombres
+                        </th>
+                        <th className='th--profez-panel'>
+                            Curso
+                        </th>
+                        <th className='th--profez-panel'>
+                            Cedula
+                        </th>
+                        <th className='th--profez-panel'>
+                            Telefono
+                        </th>
+                        <th className='th--profez-panel'>
+                            Direccion
+                        </th>
+                        <th className='th--profez-panel'>
+                            Titulacion
+                        </th>
+                        <th className='th--profez-panel'>
+                            Contraseña
+                        </th>
+                        <th className='thr'>
+                            Activo
+                        </th>
+                        
+
+                        <tr className='tr--profez'>
+                            <td className='td--profez'>AGUILAR MONTAÑO</td>
+                            <td className='td--profez'>RICHARD ANTHONY</td>
+                            <td className='td--profez'>1.BGU</td>
+                            <td className='td--profez'>178945372</td>
+                            <td className='td--profez'>0999716754</td>
+                            <td className='td--profez'>Av America y Amazonas</td>
+                            <td className='td--profez'>Dr Calcomanias</td>
+                            <td className='td--profez'>Picazonosos</td>
+                            <td className='td--profez'>SI</td>
+                        </tr>
+                    </table> 
 
                     <br/><br/><br/><br/>
-                    <ul className='mostrador'>
-                        <li >Apellidos</li>
-                        <li >Nombres</li>
-                        <li >Curso</li>
-                        <li >Cedula</li>
-                        <li >Telefono</li>
-                        <li >Direccion</li>
-                        <li >Titulacion</li>
-                        <li >Contraseña</li>
-                        <EstadoMenu estado='Inactivo'/>
-                    </ul>  
+                    <table className='Tabla--profez'>
+                        <th className='th--profez-panel'>
+                            Apellidos
+                        </th>
+                        <th className='th--profez-panel'>
+                            Nombres
+                        </th>
+                        <th className='th--profez-panel'>
+                            Curso
+                        </th>
+                        <th className='th--profez-panel'>
+                            Cedula
+                        </th>
+                        <th className='th--profez-panel'>
+                            Telefono
+                        </th>
+                        <th className='th--profez-panel'>
+                            Direccion
+                        </th>
+                        <th className='th--profez-panel'>
+                            Titulacion
+                        </th>
+                        <th className='th--profez-panel'>
+                            Contraseña
+                        </th>
+                        <th className='thr'>
+                            Inactivo
+                        </th>
+                        
+
+                        <tr className='tr--profez'>
+                            <td className='td--profez'>DORMIDO VIZCAINO</td>
+                            <td className='td--profez'>MARLON SONAMBULO</td>
+                            <td className='td--profez'>2.BGU</td>
+                            <td className='td--profez'>178945372</td>
+                            <td className='td--profez'>0999716754</td>
+                            <td className='td--profez'>Av America y Amazonas</td>
+                            <td className='td--profez'>Lic Sueños</td>
+                            <td className='td--profez'>Flojera1</td>
+                            <td className='td--profez'>SI</td>
+                        </tr>
+                    </table>   
 
                 </div>
             </div>

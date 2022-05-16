@@ -63,7 +63,7 @@ form{
 	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 300%;
-	max-width: 700px;
+	max-width: 780px;
 	margin-top:0.5rem;
     /* background-color: black; */
 }
@@ -96,7 +96,7 @@ form{
 
 .submit{
 	justify-content: center;
-	width: 32%;
+	width: 30%;
 	margin-top: 1.8rem;
 	font-size: 1.1rem;
 	padding: 0.1rem ;
@@ -106,22 +106,45 @@ form{
 	background-color: var(--grey2);
 }
 
-.mostrador li {
-    color: var(--white1);
+.Tabla--profez{
     border: 1px solid black;
-    justify-content: center;
-    padding: 8px 5px;
-    padding-right: 2.8rem;
-    padding-left: 2.8rem;
-    border-radius: 5px;
     border-collapse: collapse;
+    background-color: var(--grey1);
+    color: var(--white2);
 }
 
-ul {
-    list-style: none;
-
+.th--profez-panel{
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid black;
+    
+    color: var(--white2);
+    background-color: var(--grey1);
 }
 
-.mostrador > li {
-    float: left;
+.tr--profez{
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: var(--white1);
+    background-color: var(--grey1);
+}
+
+.td--profez{
+    padding: 15px;
+    border: 1px;
+    color: var(--white1);
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--grey1);
+}
+
+.thr{
+    padding: 10px;
+    border: 1px;
+    color: var(--white2);
+    padding-right: 2rem;
+    padding-left: 2rem;
+    text-align: center;
+    background-color: var(--grey2);
 }
