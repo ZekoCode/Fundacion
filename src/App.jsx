@@ -7,10 +7,11 @@ import VisionMateria from './components/organisms/visionMateria/VisionMateria'
 import VisionnuevoCurso from './components/organisms/visionnuevoCurso/VisionnuevoCurso'
 
 import LoginSection from './components/pages/loginSection/LoginSection'
+import TeacherDashboard from './components/pages/teacherDashboard/TeacherDashboard'
 // import StudentsList from './components/pages/studentsList/StudentsList'
 
 import SessionContext from './context/session/SessionContext'
-
+ 
 
 function App() {
   const {isLogin,state}=useContext(SessionContext)
@@ -27,16 +28,19 @@ function App() {
             !state.isAuthenticated&&(
               <>
                 <Route path="/login" element={<LoginSection/>} />
-                <Route path="/curso" element={<Navigate to="/login" replace/>} />
+                <Route path="/maestro" element={<Navigate to="/login" replace/>} />
+                <Route path="/admin" element={<Navigate to="/login" replace/>} />
+                {/* <Route path="/administrador" element={<Navigate to="/login" replace/>} /> */} //this route component's administrator
               </>
             )
           }
 
           {
             (state.isAuthenticated&&state.user.rol==='profesor')&&(
-              <Route path="/login" element={<Navigate to="/curso" replace/>} />
+              <Route path="/login" element={<Navigate to="/maestro" replace/>} />
             )
           }
+
           {/* {
             (state.isAuthenticated&&state.user.rol==='administrador')&&(
               <Route path="/login" element={<Navigate to="/curso" replace/>} />
@@ -44,15 +48,15 @@ function App() {
           } */}
 
           {
-           (state.isAuthenticated&&state.user.rol==='profesor')&&(
-              <Route path="/curso" element={<VisionCurso/>} />
+            (state.isAuthenticated&&state.user.rol==='profesor')&&(
+              <Route path="/maestro" element={<TeacherDashboard/>}/>
             )
           }
 
 
 
           <Route path="/alumnos" element={<VisionAlumno/>}/>
-          {/* <Route path="*" element={<h1>Rout not found</h1>} /> */}
+          <Route path="*" element={<h1>Route not found</h1>} />
 
           <Route path="/profe" element={<VisionProfesor/>}/>
 

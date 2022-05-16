@@ -1,0 +1,43 @@
+.tableListNotes{
+    /* border: 1px solid rgb(255, 255, 255); */
+    /* border-collapse:separate; */
+    /* background-color: #504F62; */
+    color: var(--white2);
+    width:1200px;
+}
+
+.tableListNotes--head{
+    /* background-color: rgb(219, 130, 13); */
+    margin: 0;
+    padding: 0;
+    /* margin: ; */
+    
+}
+.tableListNotes--head__row{
+    /* border: 1px solid rgb(255, 2, 2); */
+    /* background-color: antiquewhite; */
+    margin: 16px 0;
+}
+
+
+.tableListNotes--head__cel{
+    /* background-color: violet; */
+    /* border: 1px solid rgb(255, 2, 2); */
+    /* width: 40px; */
+    margin:20px 0 15px 0 ;
+} 
+
+.tableListNotes--head__cel__name{
+    text-align: left;
+    display: block;
+    margin:20px 0 15px 0 ;
+    /* background-color: aqua; */
+    /* border: 1px solid rgb(255, 2, 2); */
+}
+
+/* .tableListNotes--body{  */
+    /* border: 1px solid rgb(255, 2, 2); */
+    /* margin: 90px; */
+    /* background-color: aqua; */
+/* } */
+

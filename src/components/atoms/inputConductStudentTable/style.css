@@ -1,0 +1,16 @@
+.professorNotes--table--row__conductStudent__inputContainer{
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.professorNotes--table--row__conductStudent__inputContainer__input{
+    padding: 10px;
+    margin: 0 5px;
+    font-weight: bold;
+    border: 1px solid var(--purple1);
+    box-shadow:  inset 0 0 5px var(--purple1);
+    width: 15px;
+    color: var(--white2);
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--purple1);
+}

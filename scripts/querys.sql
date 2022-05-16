@@ -41,7 +41,7 @@ select
     conducta_3 as c3,
     conducta_4 as c4,
     conducta_quimestral_2 as cq2,
-    enabled,
+    -- enabled as Habilitado,
     fecha_creacion,
     fecha_edicion
 from Calificaciones 
@@ -51,3 +51,32 @@ inner join Profesores on fk_id_profesor=id_profesor
 inner join Materias on fk_id_materia=id_materia;
 
 
+-- DROP PROCEDURE IF EXISTS `verifyIdentity`;
+-- CREATE DEFINER=`mainUser`@`%` PROCEDURE `verifyIdentity`(
+--    	_typeUser varchar(15),
+-- 	_cedula varchar(10),
+--     _password text
+--     )
+-- begin 
+-- case _typeUser   
+-- when 'administrador' then 
+
+--     select id_administrador as Id, 
+--     nombres as Nombres, 
+--     apellidos as Apellidos, 
+--     cedula as Cedula, 
+--     telefono as Telefono, 
+--     direccion as Direccion 
+--     from Administradores where cedula=_cedula and password=_password;
+
+-- when 'profesor' then
+--     select id_profesor as Id, 
+--     nombres as Nombres, 
+--     apellidos as Apellidos, 
+--     cedula as Cedula, 
+--     telefono as Telefono, 
+--     direccion as Direccion 
+--     from Profesores where cedula=_cedula and password=_password and enabled=1;
+
+-- end case;
+-- end;

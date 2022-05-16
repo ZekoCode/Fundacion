@@ -1,0 +1,26 @@
+.listCoursProfesor {
+    background-color:var(--grey1);
+    /* background-color: aqua; */
+    height:100%;
+    width:200px;
+    border-right: 1px solid var(--white2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.listCoursProfesor__itemsContainer{
+    height: 100%;
+
+
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 0px;
+    box-sizing: border-box;
+}
