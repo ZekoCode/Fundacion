@@ -81,9 +81,11 @@ function ProfesorState(props) {
       authorization:state.token,
       typeuser:state.user.rol
     }
+    // console.log(noteToUpdate)
 
     await axios.post(`http://${host}/api/v1/put/calificacion`,noteToUpdate,{headers:credentials})
       .then(()=>{
+        console.log('updated')
         getCalificaciones()
       })
       .catch(error=>console.error(error))

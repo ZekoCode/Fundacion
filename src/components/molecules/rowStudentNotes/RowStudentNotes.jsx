@@ -6,7 +6,7 @@ import NameStudentRowTableNotes from "../../atoms/nameStudentRowTableNotes/NameS
 import "./style.css";
 
 function RowStudentNotes({ dataInfo, id }) {
-
+  // console.log(dataInfo)
 
   return (
     <tr key={id} className="tableListNotes--body__row">
@@ -17,6 +17,7 @@ function RowStudentNotes({ dataInfo, id }) {
         score={dataInfo.p1 || 0.0}
       />
       <InputNoteStudentTable
+      
         action="parcial_2"
         identifyNote={dataInfo.Id}
         score={dataInfo.p2 || 0.0}
@@ -45,33 +46,40 @@ function RowStudentNotes({ dataInfo, id }) {
       <LabelNoteStudenAverage valueAverage={dataInfo.pq2 || 0.0} />
       <LabelNoteStudenAverage valueAverage={dataInfo.pa || 0.0} />
       <InputConductStudentTable
-        identifyNote={dataInfo.Id}
-        conduct={dataInfo.c1 || "-"}
+        identifyConduct={dataInfo.Id}
+        conduct={dataInfo.c1}
+        action="conducta_1"
       />
       <InputConductStudentTable
-        identifyNote={dataInfo.Id}
-        conduct={dataInfo.c1 || "-"}
+        identifyConduct={dataInfo.Id}
+        conduct={dataInfo.c2 }
+        action='conducta_2'
       />
       <InputConductStudentTable
-        identifyNote={dataInfo.Id}
-        conduct={dataInfo.c1 || "-"}
+        identifyConduct={dataInfo.Id}
+        conduct={dataInfo.cq1 }
+        action='conducta_quimestral_1'
       />
       <InputConductStudentTable
-        identifyNote={dataInfo.Id}
-        conduct={dataInfo.c1 || "-"}
+        identifyConduct={dataInfo.Id}
+        conduct={dataInfo.c3 }
+        action='conducta_3'
       />
       <InputConductStudentTable
-        identifyNote={dataInfo.Id}
-        conduct={dataInfo.c1 || "-"}
+        identifyConduct={dataInfo.Id}
+        conduct={dataInfo.c4 }
+        action='conducta_4'
       />
       <InputConductStudentTable
-        identifyNote={dataInfo.Id}
-        conduct={dataInfo.c1 || "-"}
+        identifyConduct={dataInfo.Id}
+        conduct={dataInfo.cq2 }
+        action='conducta_quimestral_2'
       />
-      <InputConductStudentTable
-        identifyNote={dataInfo.Id}
-        conduct={dataInfo.c1 || "-"}
-      />
+      {/* <InputConductStudentTable
+        identifyConduct={dataInfo.Id}
+        valueConduct={dataInfo.cq2 }
+        action='parcial_4"
+      /> */}
     </tr>
   );
 }

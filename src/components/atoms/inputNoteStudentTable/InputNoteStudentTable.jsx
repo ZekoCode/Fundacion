@@ -52,8 +52,9 @@ function InputNoteStudentTable({identifyNote, score ,action}) {
         max="10.00"
         onKeyPress={(e) => {
           if (e.key == "Enter") {
-            e.preventDefault();
+            // e.preventDefault();
             updateScore();
+            // updateNote(stateNote);
           }
         }}
         value={stateNote.score}

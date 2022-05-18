@@ -1,35 +1,64 @@
-import React from 'react'
+import React,{useContext,useState} from 'react'
+import ProfesorContext from '../../../context/profesor/ProfesorContext'
 import './style.css'
 
-function InputConductStudentTable() {
+function InputConductStudentTable({identifyConduct,conduct,action}) {
+  const {updateNote}=useContext(ProfesorContext)
 
-  const [valueConduct, setValue] = React.useState("-")
+  if(conduct==null){
+    conduct=''
+  }
 
-  const handleChange = (event) => {
-    const value=event.target.value
-    // setValue(value)
-    if(/^([a-fA-ABCDEF\-\.])+$/.test(value)){
-      setValue(value.toUpperCase())
-    }
+
+  const conductInitialState={ 
+    id:identifyConduct,
+    score:0,
+    action,
+    conduct
+  }
+
+  const [valueConduct, setValue] = useState(conductInitialState)
+
+  const handleChange = (value) => {
+      setValue({
+        ...valueConduct,
+        conduct:value
+      })
+      // updateNote(valueConduct)
+    // } 
+  }
+
+  const updateConduct=()=>{
+    updateNote(valueConduct)
   }
 
   return (
     <td className='professorNotes--table--row__conductStudent__inputContainer'>
         <input className='professorNotes--table--row__conductStudent__inputContainer__input' 
         type="text"
-        value={valueConduct}
+        value={valueConduct.conduct}
         onKeyPress={(e) => {
-          if(/^([a-fA-ABCDEF\-])+$/.test(e.key)){
-            // e.preventDefault()
-            setValue(e.key.toUpperCase())
+          if (e.key == "Enter") {
+            updateConduct()
           }
-        }}
+          // if(/^([a-fA-ABCDEF\-])+$/.test(e.key)){
+            // e.preventDefault()
+            // setValue(e.key.toUpperCase())
+            // handleChange(e.key.toUpperCase())
+          }
+        // }
+      }
         onChange={(e)=>{
-          // handleChange(e)
+          const key=e.target.value
+            if(/^([a-fA-ABCDEF\-])+$/.test(key)){
+              // console.log(key.toUpperCase())
+              handleChange((e.target.value).toUpperCase())
+            }
         }}
         />
     </td>
   )
+
 }
 
 export default InputConductStudentTable

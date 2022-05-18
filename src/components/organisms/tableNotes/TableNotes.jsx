@@ -61,9 +61,9 @@ function TableNotes() {
           <th className="tableListNotes--head__cel">
             <p>CQ2</p>
           </th>
-          <th className="tableListNotes--head__cel">
+          {/* <th className="tableListNotes--head__cel">
             <p>CF</p>
-          </th>
+          </th> */}
         </tr>
       </thead>
       <tbody className="tableListNotes--body">
