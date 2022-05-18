@@ -24,6 +24,7 @@ function VisionnuevoCurso() {
                         <ButtonForm sesion='Materias' />
                         <ButtonForm sesion='Cursos' />
                         <ButtonForm sesion='Calificaciones' />
+                        <ButtonForm sesion='Configuracion' />
                     </div>
 
                     <ButtonForm sesion='Cerrar Sesion' />
@@ -52,18 +53,44 @@ function VisionnuevoCurso() {
                     </main>
                     <br/><br/>
 
-                    <ul className='mostrador'>
-                        <li>Grado</li>
-                        <li>Paralelo</li>
-                        <EstadoMenu estado='Activo'/>
-                    </ul> 
+                    <table className='Tabla--curso'>
+                        <th className='th--curso-panel'>
+                            Grado
+                        </th>
+                        <th className='th--curso-panel'>
+                            Paralelo
+                        </th>
+                        <th className='thr'>
+                            Activo
+                        </th>
+                        
+
+                        <tr className='tr--curso'>
+                            <td className='td--curso'>10.GBU</td>
+                            <td className='td--curso'>A</td>
+                            <td className='td--curso'>SI</td>
+                        </tr>
+                    </table> 
                     <br/><br/><br/><br/>
 
-                    <ul className='mostrador'>
-                        <li>Grado</li>
-                        <li>Paralelo</li>
-                        <EstadoMenu estado='Inactivo'/>
-                    </ul> 
+                    <table className='Tabla--curso'>
+                        <th className='th--curso-panel'>
+                            Grado
+                        </th>
+                        <th className='th--curso-panel'>
+                            Paralelo
+                        </th>
+                        <th className='thr'>
+                            Inactivo
+                        </th>
+                        
+
+                        <tr className='tr--curso'>
+                            <td className='td--curso'>8.BGU</td>
+                            <td className='td--curso'>B</td>
+                            <td className='td--curso'>SI</td>
+                        </tr>
+                    </table>
                     
                 </div>
             </div>

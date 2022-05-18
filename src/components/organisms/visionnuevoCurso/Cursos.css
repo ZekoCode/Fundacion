@@ -106,22 +106,45 @@ form{
 	background-color: var(--grey2);
 }
 
-.mostrador li {
-    color: var(--white1);
-    border: 1px solid var(--black2);
-    justify-content: center;
-    padding: 8px 5px;
-    padding-right: 2.8rem;
-    padding-left: 2.8rem;
-    border-radius: 5px;
+.Tabla--curso{
+    border: 1px solid black;
     border-collapse: collapse;
+    background-color: var(--grey1);
+    color: var(--white2);
 }
 
-ul {
-    list-style: none;
-
+.th--curso-panel{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    
+    color: var(--white2);
+    background-color: var(--grey1);
 }
 
-.mostrador > li {
-    float: left;
+.tr--curso{
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    color: var(--white1);
+    background-color: var(--grey1);
+}
+
+.td--curso{
+    padding: 15px;
+    border: 1px;
+    color: var(--white1);
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--grey1);
+}
+
+.thr{
+    padding: 10px;
+    border: 1px;
+    color: var(--white2);
+    padding-right: 2rem;
+    padding-left: 2rem;
+    text-align: center;
+    background-color: var(--grey2);
 }
