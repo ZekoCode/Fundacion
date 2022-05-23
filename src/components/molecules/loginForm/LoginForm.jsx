@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
   const navigating = useNavigate();
-  const {login } = useContext(SessionContext);
+  const {login} = useContext(SessionContext);
 
   const credentials = {
     typeCout: "",
@@ -32,10 +32,18 @@ function LoginForm() {
   const initSession = async (e) => {
     try {
       e.preventDefault();
-      const isAutorizated = await login(credentialsState);
-      if (isAutorizated) {
-        navigating("/curso");
-      }
+      
+      login(credentialsState)
+        .then((res)=>{
+          if(res.user.inforUser.rol==='profesor'){
+            navigating('/maestro')
+          }else if(res.user.inforUser.rol==='administrador'){
+            navigating('/station')
+          }
+        })
+        .catch(()=>{
+          // alert("Usuario o contraseña incorrectos")
+        })
 
       uncheckedRadioButton();
       setCredentialsState({

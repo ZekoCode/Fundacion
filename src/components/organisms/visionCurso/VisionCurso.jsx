@@ -20,7 +20,7 @@ function VisionCurso() {
       <div className='contenedor--main'>
         <ListaCursosProfesor/>
         {stateProfesor.currentCourse.materia?
-          (<div className="contenido">
+          (<div className="contenido-visionCurso-Profesor">
           <TitleCourse titleText={`${stateProfesor.currentCourse.materia} - ${stateProfesor.currentCourse.curso}`}/>
           <TableNotes/>
           </div>):(<div className="contenido"></div>)

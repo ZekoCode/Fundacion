@@ -36,7 +36,7 @@ function VisionnuevoCurso() {
                     <TitleForm text='Cursos' />
 
                     <main>
-                        
+                         
                         <form>
                             <div className='field'>
                                 <label>Grado</label>

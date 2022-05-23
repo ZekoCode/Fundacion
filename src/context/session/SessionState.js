@@ -4,7 +4,7 @@ import SessionContext from "./SessionContext";
 import axios from "axios";
 import { host } from "../types";
 import Cookies from "universal-cookie";
-
+ 
 const cookies = new Cookies();
 
 function SessionState(props) {
@@ -81,14 +81,17 @@ function SessionState(props) {
           type: "LOGIN",
           payload: _userSession.data,
         });
-        resolve("Wellcome");
+        resolve({
+          isAuthenticated: true,
+          user: _userSession.data,
+        });
       }else{
         dispatch({
           type: "ERROR",
           payload: "Login session: Credentials invalid",
         });
         
-        reject(new Error("Login session: Credentials invalid"));
+        // reject(new Error("Login session: Credentials invalid"));
       }
     });
   };

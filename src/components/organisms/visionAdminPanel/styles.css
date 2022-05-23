@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-.contenido-visionCurso-Profesor {
+.contenido {
     background-color: var(--grey1);
     height:100%;
     padding:35px;

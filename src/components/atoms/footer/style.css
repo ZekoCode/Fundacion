@@ -1,8 +1,8 @@
 .footer{
     background: var(--grey1);
-    color: #DEC9F2;
+    color: var(--white2);
     width: 100%;
-    /* margin: 30px ;  */
+    margin-top: 6px ; 
     text-align: center;
     font-size: 1em;
     position: relative;

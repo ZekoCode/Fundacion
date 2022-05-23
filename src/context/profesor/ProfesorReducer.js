@@ -8,7 +8,7 @@ const ProfesorReducer= (state, action)=>{
             return {
                 ...state,
                calificaciones:[...payload]
-            }    
+            }     
 
         case saveCursosWithMatters:
             return{

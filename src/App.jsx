@@ -11,6 +11,8 @@ import TeacherDashboard from './components/pages/teacherDashboard/TeacherDashboa
 // import StudentsList from './components/pages/studentsList/StudentsList'
 
 import SessionContext from './context/session/SessionContext'
+import AdminDashboard from './components/pages/adminDashboard/AdminDashboard'
+import LandingPage from './components/pages/landingPage/LandingPage'
  
 
 function App() {
@@ -29,8 +31,9 @@ function App() {
               <>
                 <Route path="/login" element={<LoginSection/>} />
                 <Route path="/maestro" element={<Navigate to="/login" replace/>} />
-                <Route path="/admin" element={<Navigate to="/login" replace/>} />
-                {/* <Route path="/administrador" element={<Navigate to="/login" replace/>} /> */} //this route component's administrator
+                {/* <Route path="/admin" element={<Navigate to="/login" replace/>} /> */}
+                <Route path="/administrador" element={<Navigate to="/login" replace/>} />
+                {/* <Route path="*" element={<Navigate to="/login" replace/>} /> */}
               </>
             )
           }
@@ -41,22 +44,29 @@ function App() {
             )
           }
 
-          {/* {
+          {
             (state.isAuthenticated&&state.user.rol==='administrador')&&(
-              <Route path="/login" element={<Navigate to="/curso" replace/>} />
+              <Route path="/login" element={<Navigate to="/administrador" replace/>} />
             )
-          } */}
+          }
+
 
           {
             (state.isAuthenticated&&state.user.rol==='profesor')&&(
               <Route path="/maestro" element={<TeacherDashboard/>}/>
             )
           }
+          {
+            (state.isAuthenticated&&state.user.rol==='administrador')&&(
+              <Route path="/administrador" element={<AdminDashboard/>}/>
+            )
+          }
 
-
-
-          <Route path="/alumnos" element={<VisionAlumno/>}/>
+          <Route path="/" element={<LandingPage/>} />
           <Route path="*" element={<h1>Route not found</h1>} />
+          
+          <Route path="/alumnos" element={<VisionAlumno/>}/>
+          
 
           <Route path="/profe" element={<VisionProfesor/>}/>
 
